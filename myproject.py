@@ -22,7 +22,7 @@ def main():
         """
         <style>
         .stApp {
-            background-image: url("https://example.com/background.jpg");
+            background-image: url("https://www.pmworld360.com/wp-content/uploads/2022/10/Resume-Tips.png");
             background-size: cover;
         }
         </style>
