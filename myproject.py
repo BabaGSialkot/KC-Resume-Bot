@@ -2,10 +2,6 @@ import streamlit as st
 from PIL import Image
 import pytesseract
 
-# Set the path to tesseract executable
-# Uncomment and adjust the following line based on your operating system and installation
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Example for Windows
-
 # Function to extract text from image
 def extract_text_from_image(image):
     try:
@@ -18,12 +14,7 @@ def extract_text_from_image(image):
 def main():
     st.title("Resume Modifier for Data Science")
 
-    # Checking if Tesseract is installed
-    try:
-        pytesseract.get_tesseract_version()
-    except:
-        st.error("Tesseract-OCR is not installed or not found in PATH. Please install it and restart the app.")
-        return
+    
 
     # Resume upload
     uploaded_file = st.file_uploader("Choose a file")
