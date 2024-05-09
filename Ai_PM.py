@@ -117,7 +117,7 @@ if st.sidebar.button("Generate Portfolio"):
     elif market_conditions <= 4:
         st.write("- Allocate more to fixed-income securities or defensive stocks to mitigate risk.")
         st.write("- Consider diversifying into alternative assets such as gold or real estate.")
-
+ 
     else:
         st.write("- Maintain a balanced portfolio with a mix of equities and fixed-income securities.")
         st.write("- Regularly review and rebalance your portfolio to adapt to changing market conditions.")
