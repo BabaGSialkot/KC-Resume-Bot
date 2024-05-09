@@ -12,7 +12,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d9");
+        background-image: url("https://www.nerdwallet.com/assets/blog/wp-content/uploads/2019/09/GettyImages-639106078.jpg-what-is-portfolio-management.jpg");
         background-size: cover;
     }
     </style>
