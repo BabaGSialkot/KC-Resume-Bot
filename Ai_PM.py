@@ -1,7 +1,24 @@
 import streamlit as st
 
-# Page Title with Icon
-st.title("📈 AI-Driven Portfolio Management Tool")
+# Set page configuration
+st.set_page_config(
+    page_title="AI-Driven Portfolio Management Tool",
+    page_icon="💼",
+    layout="wide"
+)
+
+# Background Image
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d9");
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Sidebar with Gradient Background
 st.sidebar.title("User Input")
@@ -42,21 +59,51 @@ if st.sidebar.button("Generate Portfolio"):
     st.write("Based on your inputs, it's recommended to allocate your portfolio as follows:")
 
     if risk_profile == "Low Risk":
-        st.write("- 60% in bonds or fixed-income securities")
-        st.write("- 30% in blue-chip stocks")
-        st.write("- 10% in cash or cash equivalents")
+        bonds_percentage = 60
+        bonds_amount = financial_goals * bonds_percentage / 100
+        st.write(f"- {bonds_percentage}% in bonds or fixed-income securities (${bonds_amount:.2f})")
+
+        stocks_percentage = 30
+        stocks_amount = financial_goals * stocks_percentage / 100
+        st.write(f"- {stocks_percentage}% in blue-chip stocks (${stocks_amount:.2f})")
+
+        cash_percentage = 10
+        cash_amount = financial_goals * cash_percentage / 100
+        st.write(f"- {cash_percentage}% in cash or cash equivalents (${cash_amount:.2f})")
 
     elif risk_profile == "Medium Risk":
-        st.write("- 40% in diversified stocks")
-        st.write("- 30% in bonds or fixed-income securities")
-        st.write("- 20% in real estate investment trusts (REITs)")
-        st.write("- 10% in cash or cash equivalents")
+        stocks_percentage = 50
+        stocks_amount = financial_goals * stocks_percentage / 100
+        st.write(f"- {stocks_percentage}% in diversified stocks (${stocks_amount:.2f})")
+
+        bonds_percentage = 30
+        bonds_amount = financial_goals * bonds_percentage / 100
+        st.write(f"- {bonds_percentage}% in bonds or fixed-income securities (${bonds_amount:.2f})")
+
+        reits_percentage = 15
+        reits_amount = financial_goals * reits_percentage / 100
+        st.write(f"- {reits_percentage}% in real estate investment trusts (REITs) (${reits_amount:.2f})")
+
+        cash_percentage = 5
+        cash_amount = financial_goals * cash_percentage / 100
+        st.write(f"- {cash_percentage}% in cash or cash equivalents (${cash_amount:.2f})")
 
     elif risk_profile == "High Risk":
-        st.write("- 50% in growth stocks")
-        st.write("- 20% in emerging market funds")
-        st.write("- 20% in technology sector ETFs")
-        st.write("- 10% in speculative investments or individual stocks")
+        growth_stocks_percentage = 60
+        growth_stocks_amount = financial_goals * growth_stocks_percentage / 100
+        st.write(f"- {growth_stocks_percentage}% in growth stocks (${growth_stocks_amount:.2f})")
+
+        emerging_markets_percentage = 20
+        emerging_markets_amount = financial_goals * emerging_markets_percentage / 100
+        st.write(f"- {emerging_markets_percentage}% in emerging market funds (${emerging_markets_amount:.2f})")
+
+        tech_etfs_percentage = 15
+        tech_etfs_amount = financial_goals * tech_etfs_percentage / 100
+        st.write(f"- {tech_etfs_percentage}% in technology sector ETFs (${tech_etfs_amount:.2f})")
+
+        speculative_investments_percentage = 5
+        speculative_investments_amount = financial_goals * speculative_investments_percentage / 100
+        st.write(f"- {speculative_investments_percentage}% in speculative investments or individual stocks (${speculative_investments_amount:.2f})")
 
     # Placeholder for AI-driven portfolio recommendations
     # Display AI-driven recommendations based on user input and market data
