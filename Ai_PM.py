@@ -12,7 +12,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://www.pnbmetlife.com/content/dam/pnb-metlife/images/articles/wealth/portfolio-management-and-its-importance.jpg");
+        background-image: url("https://qvistorp.com/blog/wp-content/uploads/2023/01/JJ9rGPuHp74zU8WPB6uXfu1yk27QWVWltt9rUlJB.jpg");
         background-size: cover;
     }
     </style>
