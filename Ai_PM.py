@@ -2,7 +2,7 @@ import streamlit as st
 
 # Set page configuration
 st.set_page_config(
-    page_title="AI-Driven Portfolio Management Tool",
+    page_title="💼 AI-Driven Portfolio Management Tool",
     page_icon="💼",
     layout="wide"
 )
