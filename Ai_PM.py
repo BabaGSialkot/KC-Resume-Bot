@@ -1,10 +1,11 @@
 import streamlit as st
 
-# Page Title
-st.title("AI-Driven Portfolio Management Tool")
+# Page Title with Icon
+st.title("📈 AI-Driven Portfolio Management Tool")
 
-# Sidebar
-st.sidebar.header("User Input")
+# Sidebar with Gradient Background
+st.sidebar.title("User Input")
+st.sidebar.markdown("---")
 
 # User Input - Risk Profile
 risk_profile = st.sidebar.selectbox(
@@ -27,7 +28,7 @@ market_conditions = st.sidebar.slider(
     value=5
 )
 
-# Button to Generate Portfolio
+# Button to Generate Portfolio with Gradient Background
 if st.sidebar.button("Generate Portfolio"):
     # Display User Input Summary
     st.subheader("User Input Summary")
